@@ -6,7 +6,7 @@ with open("requirements.txt") as req:
 
 setup(name='gerenciador',
       version="0.0.1",
-      description="Gerencaidor Financeiro ",
+      description="Gerenciador Financeiro ",
       url="",
       author="Yuri Mussi",
       author_email="ymussi@gmail.com",

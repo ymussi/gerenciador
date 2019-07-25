@@ -10,7 +10,7 @@ import json
 log = logging.getLogger(__name__)
 
 ns = api.namespace(
-    'gerencaidor', description='Gerenciador Financeiro')
+    'gerenciador', description='Gerenciador Financeiro')
 
 
 @ns.route('/cadastrar/<string:descricao>/<string:data_compra>/<string:valor>/<string:vencimento>')
