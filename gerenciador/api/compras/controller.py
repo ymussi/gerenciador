@@ -6,7 +6,7 @@ import json
 
 class GerenciadorFinanceiro(object):
 
-    def cadastrar_contas(self, descricao, data_compra, valor, vencimento):
+    def cadastrar_contas(self, descricao, data_compra, valor, vencimento, observacoes):
         """
         Cadastra contas 
         """
@@ -19,6 +19,7 @@ class GerenciadorFinanceiro(object):
                 cad.valor = valor
                 cad.vencimento = vencimento
                 cad.data_criacao = data.strftime('%Y-%m-%d')
+                cad.observacoes = observacoes
                 db.session.add(cad)
                 db.session.commit()
 

@@ -13,21 +13,23 @@ ns = api.namespace(
     'gerenciador', description='Gerenciador Financeiro')
 
 
-@ns.route('/cadastrar/<string:descricao>/<string:data_compra>/<string:valor>/<string:vencimento>')
+@ns.route('/cadastrar/<string:descricao>/<string:data_compra>/<string:valor>/<string:vencimento>/<string:observacoes>')
+# @ns.route('/cadastrar')
 @ns.param('descricao', 'Descrição da compra.')
 @ns.param('data_compra', 'Data da compra.')
 @ns.param('valor', 'Valor da compra.')
 @ns.param('vencimento', 'Vencimento do cartão.')
+@ns.param('observacoes', 'Observações sobre a compra.')
 class Create(Resource):
     @ns.response(code=400, description="Bad Request")
     # @ns.expect(schemaCadastro, validate=True)
     # @ns.marshal_with(schemaResponseCadastro)
-    def post(self, descricao, data_compra, valor, vencimento):
+    def post(self, descricao, data_compra, valor, vencimento, observacoes):
         """
         Cadastra despesas
         """
         cad = GerenciadorFinanceiro()
-        resp = cad.cadastrar_contas(descricao, data_compra, valor, vencimento)
+        resp = cad.cadastrar_contas(descricao, data_compra, valor, vencimento, observacoes)
 
         return resp
 

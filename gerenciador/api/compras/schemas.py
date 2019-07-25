@@ -6,7 +6,8 @@ schemaCadastro = api.model('Cadastro', {
     'descricao': fields.String(required=True, description='Descrição da compra.'),
     'data_compra': fields.String(required=True, description='Data da compra.'),
     'valor': fields.Float(required=True, description='Valor da compra.'),
-    'vencimento': fields.String(required=True, description='Vencimento da fatura do cartao.')
+    'vencimento': fields.String(required=True, description='Vencimento da fatura do cartao.'),
+    'observacoes': fields.String(description='Observações da compra ou pagamento.')
 })
 
 schemaResponseCadastro = api.model('Response Cadastro', {
@@ -15,5 +16,6 @@ schemaResponseCadastro = api.model('Response Cadastro', {
     'data_compra': fields.String(description='Data da compra.'),
     'valor': fields.Float(description='Valor da compra.'),
     'vencimento': fields.String(description='Vencimento da fatura do cartao.'),
-    'data_criacao': fields.DateTime(description='Data do cadastro.')
+    'data_criacao': fields.DateTime(description='Data do cadastro.'),
+    'observacoes': fields.String(description='Observações da compra ou pagamento.')
 })

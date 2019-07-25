@@ -12,3 +12,4 @@ class Gerenciador(Base):
     valor = Column(DECIMAL)
     vencimento = Column(String(20))
     data_criacao = Column(DateTime)
+    observacoes = Column(String(100))
