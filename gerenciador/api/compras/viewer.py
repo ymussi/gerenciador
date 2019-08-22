@@ -13,13 +13,7 @@ ns = api.namespace(
     'gerenciador', description='Gerenciador Financeiro')
 
 
-# @ns.route('/cadastrar/<string:descricao>/<string:data_compra>/<string:valor>/<string:vencimento>/<string:observacoes>')
 @ns.route('/cadastrar')
-# @ns.param('descricao', 'Descrição da compra.')
-# @ns.param('data_compra', 'Data da compra.')
-# @ns.param('valor', 'Valor da compra.')
-# @ns.param('vencimento', 'Vencimento do cartão.')
-# @ns.param('observacoes', 'Observações sobre a compra.')
 class Create(Resource):
     @ns.response(code=400, description="Bad Request")
     @ns.expect(schemaCadastro, validate=True)
@@ -47,5 +41,3 @@ class List(Resource):
         resp = cad.listar_contas()
 
         return resp
-
-

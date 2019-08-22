@@ -6,3 +6,4 @@ configparser >= 3.5.0
 requests >= 2.18.4
 flask_cors
 pymysql==0.9.3
+pytest
