@@ -13,8 +13,6 @@ class GerenciadorFinanceiro(object):
             self.valor = dados.get('valor')
             self.vencimento = dados.get('vencimento')
             self.observacoes = dados.get('observacoes')
-        else:
-            pass
 
     def cadastrar_contas(self):
         """
