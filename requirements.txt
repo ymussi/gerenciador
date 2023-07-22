@@ -1,5 +1,5 @@
 gunicorn
-sqlalchemy==1.2.18
+sqlalchemy==1.3.0
 flask >= 1.0.2
 flask-restplus
 configparser >= 3.5.0
